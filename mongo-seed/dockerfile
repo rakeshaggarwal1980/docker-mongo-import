@@ -3,5 +3,5 @@ FROM mongo
 COPY *.json /seed-data/
 COPY *.sh /seed-data/
 RUN chmod +x /seed-data/entrypoint.sh
-ENTRYPOINT ["Hello World"]
-CMD ["foreman", "start"]
+#ENTRYPOINT ["Hello World"]
+#CMD ["foreman", "start"]
