@@ -1,5 +1,5 @@
 FROM mongo
 
 COPY *.json /seed-data/
-COPY *.sh /bin/sh
+COPY *.sh /usr/local/bin
 CMD 'sh entrypoint.sh'
