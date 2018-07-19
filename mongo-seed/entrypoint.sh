@@ -6,6 +6,7 @@ echo "Hello world"
 
 for file in "$DIR"*.json
 
+
 do
 
 fileBaseName="$(basename $file)"
