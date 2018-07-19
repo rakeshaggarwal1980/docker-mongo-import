@@ -1,5 +1,7 @@
 FROM mongo
 
 COPY *.json /seed-data/
-COPY *.sh /bin/sh
-CMD 'sh entrypoint.sh'
+COPY *.sh /seed-data/
+RUN chmod 755 /seed-data/entrypoint.sh
+ENTRYPOINT ["/seed-data/entrypoint.sh"]
+CMD ["foreman", "start"]
