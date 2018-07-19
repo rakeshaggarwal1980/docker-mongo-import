@@ -3,5 +3,7 @@ FROM mongo
 COPY *.json /seed-data/
 COPY *.sh /seed-data/
 RUN chmod +x /seed-data/entrypoint.sh
+
+CMD mongoimport --host mongodb --db subquip --collection  testing --type json --file equipments.json --jsonArray
 #ENTRYPOINT ["Hello World"]
 #CMD ["foreman", "start"]
