@@ -3,5 +3,6 @@ FROM mongo
 COPY *.json /seed-data/
 COPY *.sh /seed-data/
 RUN chmod 755 /seed-data/entrypoint.sh
+RUN apk add --update bash
 ENTRYPOINT ["/seed-data/entrypoint.sh"]
 CMD ["foreman", "start"]
